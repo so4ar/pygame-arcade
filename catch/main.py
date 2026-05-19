@@ -15,7 +15,7 @@ PLAYER2_SIZE = 3
 
 pygame.init() #Start pygame
 screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT)) #Rozmiar okna
-pygame.display.set_caption('My Game') #Nazwa okna
+pygame.display.set_caption('Catch Game') #Nazwa okna
 clock = pygame.time.Clock() #Zegar
 score = 0
 timer = ROUND_TIME
@@ -26,11 +26,11 @@ player2_speed = PLAYER1_BASE_SPEED + 5
 player1_pos_x, player1_pos_y = 100, 100
 player2_pos_x, player2_pos_y = 500, 100
 
-player1_img = pygame.image.load('niggerX1.png').convert_alpha()
+player1_img = pygame.image.load('char.png').convert_alpha()
 player1_img = pygame.transform.scale_by(player1_img,PLAYER1_SIZE)
 player1_rect = player1_img.get_rect(center=(player1_pos_x,player1_pos_y))
 
-player2_img = pygame.image.load('niggerX1.png').convert_alpha()
+player2_img = pygame.image.load('char.png').convert_alpha()
 player2_img = pygame.transform.scale_by(player2_img,PLAYER2_SIZE)
 player2_rect = player2_img.get_rect(center=(player2_pos_x,player2_pos_y))
 
