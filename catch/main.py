@@ -105,6 +105,7 @@ def pause():
 while True: #Game loop
     handle_event()
     update()
+    hit()
 
     now = pygame.time.get_ticks()
     if now - last_time >= 1000:
@@ -126,7 +127,6 @@ while True: #Game loop
     if keys[pygame.K_s]: player1_pos_y += player1_speed
     if keys[pygame.K_a]: player1_pos_x -= player1_speed
     if keys[pygame.K_d]: player1_pos_x += player1_speed
-    if keys[pygame.K_LSHIFT]: hit()
 
 
     if keys[pygame.K_UP]: player2_pos_y -= player2_speed
